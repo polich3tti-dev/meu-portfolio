@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--------<Fontes Personalizadas>-------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!--------</Fontes Personalizadas>-------->
+
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="https://kit.fontawesome.com/985773f3e0.js" crossorigin="anonymous"></script>
+    <title>Marcello Polichetti | Developer</title>
+</head>
+<body>
+    <div id="header">
+       <div class="container">
+        <nav>
+            <img src="./images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contact">Contato</a></li>
+                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <h1>Oi, sou o <span>Marcello</span></h1><br>
+            <p>Desenvolvedor de Software</p>
+        </div>
+       </div> 
+    </div>
+    <!-------------About----------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">Sobre Mim</h1>
+                    <p>Sou uma pessoa proativa, comunicativa e resiliente.<br>Sempre em busca de novos desafios e conhecimentos.<br>Adoro o trabalho em equipe, tenho paixão por aprender e ensinar, visando o desenvolvimento pessoal, profissional e da comunidade.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Tecnologias</p>
+                        <p class="tab-links" onclick="opentab('tech')">Formação</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experiência</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Desenvolvimento Front-End</span><br>HTML5 | CSS3 | JavaScript</li>
+                            <li><span>Desenvolvimento Back-End</span><br>
+                            Node.js | Python</li>
+                            <li><span>Banco de Dados</span><br>MySQL</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="tech">
+                        <ul>
+                            <li><span>Universidade Cruzeiro do Sul</span><br>Engenharia de Software - Cursando</li>
+                            <li><span>Escola Britânica de Artes Criativas & Tecnologia</span><br>Desenvolvedor Full-Stack Python - Cursando</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>N/D</span><br>Em Breve</li>
+                            <li><span>N/D</span><br>Em Breve</li>
+                            <li><span>N/D</span><br>Em Breve</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!---------------Portfolio------------------>
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Meu Portfólio</h1>
+        <div class="portfolio-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Projetos Reais</h2>
+                <p>
+                    Aqui você acessa meus projetos reais para clientes e/ou em colaboração com outros desenvolvedores.
+                </p>
+                <a href="#">Saiba mais</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h2>Projetos de Estudo</h2>
+                <p>
+                    Aqui você acessa meus projetos pessoais, que fiz com objetivo de consolidar meus conhecimentos e adquirir um pouco de prática.
+                </p>
+                <a href="#">Saiba mais</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----------Contact--------->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Entre em Contato</h1>
+                <p><i class="fa-solid fa-envelope"></i> polichetti.dev@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://br.linkedin.com/in/polichetti-dev" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/polich3tti-dev" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://wa.me/5511914321531?text=Ol%C3%A1%2C+Marcello" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <a href="images/Resume.pdf" download class="btn">Baixar CV</a>
+            </div>
+            <div class="contact-right">
+                <form target="_blank" action="https://formsubmit.co/polichetti.dev@gmail.com" method="POST">
+                    <input id="name" type="text" name="Nome"
+                    placeholder="Seu nome" required>
+                    <input id="mail" type="email" name="Email" placeholder="Seu Email" required>
+                    <textarea id="text" name="Mensagem" rows="6" placeholder="Sua Mensagem"></textarea>
+                    <button type="submit" class="btn" style="margin-top: 10px;" onclick="formSend()">Enviar</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!----------------------Função responsável por abrir abas da seção "Sobre Mim" (About)----------------------------->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <!------------------------------------------------------------------------------------------------------------------>
+    
+
+
+
+
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!------------Função responsável por abrir menu lateral na página designada para dispositivos móveis--------------->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+    <!----------------------------------------------------------------------------------------------------------------->
+
+
+
+
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!---Função responsável por limpar campos do formulário e exibir mensagem de "Sucesso" ao clicar no botão Enviar--->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <script>
+        const msg = document.getElementById("msg");
+        function formSend(){
+            msg.innerHTML = "Mensagem enviada com sucesso!"
+            setTimeout(function(){
+                msg.innerHTML = ""      
+            }, 5000)
+            setTimeout(function(){
+                document.getElementById('name').value='';
+                document.getElementById('mail').value='';
+                document.getElementById('text').value=''; 
+            },1000)
+            }
+    </script>
+    <!-- Observação: Gostaria de deixar os códigos da linha 188, 189 e 190 fora da função "setTimeout",
+         porém ao fazer isso, o formulário apresentou alguns bugs e deixou de enviar as informações para o meu e-mail. 
+         Essa foi a forma que encontrei para resolver o problema. -->
+    <!----------------------------------------------------------------------------------------------------------------->
+</body>
+</html>
